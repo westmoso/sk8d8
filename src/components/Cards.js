@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import TinderCards from 'react-tinder-card'
 import '../styling/Cards.css';
-import database from "../base"
+// import database from "../base"
 // import database from "../firebase" --importing to configure database connection to collection of users later. requires modifying the base.js file which needs .env error corrected that stops/invalidates signup and sign in
 
 
@@ -22,19 +22,6 @@ function Cards() {
         }
 
     ]);
-
-    // useEffect(() => {
-    //     const unsubscribe = database
-    //         .collection(`skaters`)
-    //         .onSnapshot(snapshot => {
-    //             setSkater(snapshot.docs.map(doc => doc.data()))
-    //         });
-
-    //     return () => {
-    //         unsubscribe();
-    //     };
-    // }, [])
-
 
     const swiped = (direction, nameToDelete) => {
         console.log("receiving " + nameToDelete)

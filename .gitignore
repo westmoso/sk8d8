@@ -19,6 +19,8 @@ sk8d8-300403-60957634954a.json
 .env.development.local
 .env.test.local
 .env.production.local
+.eslintcache
+
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs

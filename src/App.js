@@ -6,13 +6,15 @@ import Header from "./components/Header"
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import Cards from "./components/Cards"
+import ChatList from './components/ChatList';
+import ChatScreen from './components/ChatScreen';
 import SwipeButton from './components/SwipeButton';
 import { AuthProvider } from "./auth/Auth";
 import PrivateRoute from "./auth/PrivateRoute";
+import Profile from './components/Profile';
 
 
-
-const App = () => {
+function App() {
   return (
     <AuthProvider>
       <Router>
@@ -21,6 +23,16 @@ const App = () => {
             <Header />
             <Cards />
             <PrivateRoute exact path="/" component={Home} />
+            <PrivateRoute
+              path="/profile"
+              component={Profile} />
+            <Route exact path="/chat"><Header backButton="/" />
+              <ChatList />
+            </Route>
+            <Route path="/chat/:person">
+              <Header backButton="/" />
+              <ChatScreen />
+            </Route>
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={SignUp} />
             <SwipeButton />
