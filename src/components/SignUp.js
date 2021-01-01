@@ -1,6 +1,7 @@
 import React, { useCallback } from "react";
 import { withRouter } from "react-router";
 import app from "../base";
+import '../styling/SignUp.css';
 
 const SignUp = ({ history }) => {
     const handleSignUp = useCallback(async event => {
