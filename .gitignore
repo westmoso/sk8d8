@@ -9,6 +9,11 @@
 *.user
 *.userosscache
 *.sln.docstates
+/node_modules
+/.pnp
+.pnp.js
+.env
+sk8d8-300403-60957634954a.json
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
