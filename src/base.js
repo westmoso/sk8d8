@@ -2,14 +2,15 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 
 const app = firebase.initializeApp({
-    apiKey: process.env.REACT_APP_FIREBASE_KEY,
-    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-    databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
-    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-    appId: process.env.REACT_APP_FIREBASE_APP_ID,
-    measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
+    apiKey: "AIzaSyCbU6ZMTJF03v68XcJxjKHKwDKLLxNSb2w",
+    authDomain: "skated8-91010.firebaseapp.com",
+    databaseURL: "https://skated8-91010-default-rtdb.firebaseio.com/",
+    projectId: "skated8-91010",
+    storageBucket: "skated8-91010.appspot.com",
+    messagingSenderId: "362603619325",
+    appId: "1:362603619325:web:c73dc24ea89a76f1c12f94",
+    measurementId: "G-4H5RNNQ2ZM"
+
 });
 
 export function auth() {

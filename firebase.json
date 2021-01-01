@@ -16,9 +16,7 @@
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**",
-      "sk8d8-300403-60957634954a.json",
-      "/.env"
+      "**/node_modules/**"
     ],
     "rewrites": [
       {
@@ -52,5 +50,8 @@
     "ui": {
       "enabled": true
     }
+  },
+  "remoteconfig": {
+    "template": "remoteconfig.template.json"
   }
 }
