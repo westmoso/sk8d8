@@ -19,7 +19,7 @@ function Header({ backButton }) {
         console.log('reached closeMenu');
         setMenuOpen(false);
     }
-
+    // const toggleMenu = () => setMenuOpen({ menuOpen: !menuOpen })
 
     return (
         <div className="header">

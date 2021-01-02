@@ -35,6 +35,7 @@ function App() {
             </Route>
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={SignUp} />
+            <Route exact path="/profile" component={Profile} />
             <SwipeButton />
           </div>
         </Switch>
