@@ -6,12 +6,6 @@
     border-bottom: 1px solid lightgray;
 }
 
-
-.tinder_logo{
-    height:40px;
-    object-fit: contain;
-}
-
 .menuItem{
   margin:10px;
   background-color:rgb(21, 179, 0);

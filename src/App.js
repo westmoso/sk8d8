@@ -13,7 +13,6 @@ import { AuthProvider } from "./auth/Auth";
 import PrivateRoute from "./auth/PrivateRoute";
 import Profile from './components/Profile';
 
-
 function App() {
   return (
     <AuthProvider>
@@ -21,21 +20,13 @@ function App() {
         <Switch>
           <div>
             <Header />
-            <Cards />
             <PrivateRoute exact path="/" component={Home} />
-            <PrivateRoute
-              path="/profile"
-              component={Profile} />
-            <Route exact path="/chat"><Header backButton="/" />
-              <ChatList />
-            </Route>
-            <Route path="/chat/:person">
-              <Header backButton="/" />
-              <ChatScreen />
-            </Route>
+            <Route exact path="/profile" component={Profile} />
+            <Route exact path="/chat"><ChatList /> </Route>
+            <Route path="/chat/:person"><ChatScreen /> </Route>
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={SignUp} />
-            <Route exact path="/profile" component={Profile} />
+            <Cards />
             <SwipeButton />
           </div>
         </Switch>

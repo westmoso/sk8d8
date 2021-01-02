@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import PersonIcon from '@material-ui/icons/Person';
 import ForumIcon from '@material-ui/icons/Forum';
 import IconButton from '@material-ui/core/IconButton';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import HomeIcon from '@material-ui/icons/Home';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import NotListedLocationIcon from '@material-ui/icons/NotListedLocation';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import '../styling/Header.css';
 import { Link, useHistory } from 'react-router-dom';
-import { slide as Menu } from 'react-burger-menu';
 
 function Header({ backButton }) {
     const history = useHistory();
@@ -19,37 +20,32 @@ function Header({ backButton }) {
         console.log('reached closeMenu');
         setMenuOpen(false);
     }
-    // const toggleMenu = () => setMenuOpen({ menuOpen: !menuOpen })
 
     return (
         <div className="header">
-            {(backButton) ?
-                (<IconButton onClick={() => history.goBack()}>
-                    <ArrowBackIosIcon fontSize="large" />
-                </IconButton>)
-                : (<Menu
-                    isOpen={menuOpen}
-                    onStateChange={(state) => handleStateChange(state)}>
-                    <a className="menuItem" onClick={() => closeMenu()} href="/" >Home</a>
-                    <a className="menuItem" onClick={() => closeMenu()} href="/profile" >Profile</a>
-                    <a className="menuItem" onClick={() => closeMenu()} href="/chat">Chat</a>
-                    <a className="menuItem" onClick={() => closeMenu()} href="/login">Login</a>
-                </Menu>
-                )}
-            <Link to="/">
-                <img
-                    className="tinder_logo"
-                    src="https://i0.wp.com/www.vectorico.com/wp-content/uploads/2018/02/Tinder-Logo.png"
-                    alt="tinder_logo" />
+            <Link to="/home">
+                <IconButton>
+                    <HomeIcon fontSize="large" />
+                </IconButton>
+            </Link>
+            <Link to="/resources">
+                <IconButton>
+                    <NotListedLocationIcon fontSize="large" />
+                </IconButton>
             </Link>
             <Link to="/profile">
                 <IconButton>
-                    <PersonIcon fontSize="large" />
+                    <AccountCircleIcon fontSize="large" />
                 </IconButton>
             </Link>
             <Link to="/chat">
                 <IconButton>
                     <ForumIcon fontSize="large" />
+                </IconButton>
+            </Link>
+            <Link to="/login">
+                <IconButton>
+                    <ExitToAppIcon fontSize="large" />
                 </IconButton>
             </Link>
         </div>
