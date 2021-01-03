@@ -21,9 +21,11 @@
     "firebase-functions-helper": "^0.10.0",
     "firebaseui": "^4.7.1",
     "flatpickr": "^4.6.9",
+    "google-map-react": "^2.1.9",
     "logo": "^0.2.0",
     "react": "^17.0.1",
     "react-burger-menu": "^3.0.2",
+    "react-calendar": "^3.2.1",
     "react-date-picker": "^8.0.5",
     "react-dom": "^17.0.1",
     "react-firebase-hooks": "^2.2.0",
@@ -35,6 +37,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "react-tinder-card": "^1.3.1",
+    "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

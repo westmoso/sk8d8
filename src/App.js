@@ -6,6 +6,7 @@ import Header from "./components/Header"
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import Cards from "./components/Cards"
+import Resources from "./components/Resources"
 import ChatList from './components/ChatList';
 import ChatScreen from './components/ChatScreen';
 import SwipeButton from './components/SwipeButton';
@@ -22,6 +23,7 @@ function App() {
             <Header />
             <PrivateRoute exact path="/" component={Home} />
             <Route exact path="/profile" component={Profile} />
+            <Route exact path="/resources" component={Resources} />
             <Route exact path="/chat"><ChatList /> </Route>
             <Route path="/chat/:person"><ChatScreen /> </Route>
             <Route exact path="/login" component={Login} />

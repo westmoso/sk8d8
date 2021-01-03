@@ -8,6 +8,7 @@ import '../styling/Cards.css';
 function Cards() {
     const [skater, setSkater] = useState([
         {
+            age: "33",
             name: "Black Widow",
             url: "https://a-static.besthdwallpaper.com/scarlett-johansson-as-black-widow-in-avengers-wallpaper-2732x2048-12874_172.jpg"
 
@@ -35,7 +36,7 @@ function Cards() {
     return (
         <div className="skaterCards">
             <div className="card_container">
-                {skater.map(person => (
+                {skater.map(skater => (
                     <TinderCards
                         className="swipe"
                         key={skater.name}
@@ -43,14 +44,13 @@ function Cards() {
                         onSwipe={(dir) => swiped(dir, skater.name)}
                         onCardLeftScreen={() => outOfFrame(skater.name)}>
                         <div style={{
-                            backgroundImage: `url(${person.url})`
+                            backgroundImage: `url(${skater.url})`
                         }}
                             className="card"
                         >
                             <h2>{skater.name} {skater.age}</h2>
                         </div>
                     </TinderCards>
-
                 ))}
             </div>
         </div>

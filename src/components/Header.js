@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ForumIcon from '@material-ui/icons/Forum';
 import IconButton from '@material-ui/core/IconButton';
 import HomeIcon from '@material-ui/icons/Home';
@@ -6,21 +6,9 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import NotListedLocationIcon from '@material-ui/icons/NotListedLocation';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import '../styling/Header.css';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-function Header({ backButton }) {
-    const history = useHistory();
-    const [menuOpen, setMenuOpen] = useState(false);
-    console.log('menuOpen is:', menuOpen);
-    const handleStateChange = (state) => {
-        console.log('reached handleStateChange in header');
-        setMenuOpen(state.isOpen);
-    }
-    const closeMenu = () => {
-        console.log('reached closeMenu');
-        setMenuOpen(false);
-    }
-
+function Header() {
     return (
         <div className="header">
             <Link to="/home">
