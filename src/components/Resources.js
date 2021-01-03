@@ -1,11 +1,11 @@
 import React from 'react'
-import MyGoogleMap from '../Map/MyGoogleMap';
+import LeafMap from './LeafMap';
 
 export default function Resources() {
     return (
         <div>
             Resources Page
-            <MyGoogleMap />
+            <LeafMap />
         </div>
     )
 }
