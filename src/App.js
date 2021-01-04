@@ -5,13 +5,12 @@ import Home from "./components/Home";
 import Header from "./components/Header"
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
-import SkCards from "./components/SkCards"
+import CardFrame from "./components/CardFrame"
 import Resources from "./components/Resources"
 import ChatList from './components/ChatList';
 import ChatScreen from './components/ChatScreen';
 import { AuthProvider } from "./auth/Auth";
 import PrivateRoute from "./auth/PrivateRoute";
-import Profile from './components/Profile';
 
 function App() {
   return (
@@ -20,14 +19,13 @@ function App() {
         <Switch>
           <div>
             <Header />
+            <CardFrame />
             <PrivateRoute exact path="/" component={Home} />
-            <Route exact path="/profile" component={Profile} />
             <Route exact path="/resources" component={Resources} />
             <Route exact path="/chat"><ChatList /> </Route>
             <Route path="/chat/:person"><ChatScreen /> </Route>
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={SignUp} />
-            <SkCards />
           </div>
         </Switch>
       </Router>
@@ -36,5 +34,3 @@ function App() {
 };
 
 export default App;
-
- //replace lines 22 and 23 with the cards so it's not always showing

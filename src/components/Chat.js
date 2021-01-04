@@ -2,7 +2,7 @@ import React from 'react'
 import { Avatar } from '@material-ui/core'
 import '../styling/Chat.css';
 import { Link } from 'react-router-dom';
-import '../styling/Chat.css';
+
 
 
 

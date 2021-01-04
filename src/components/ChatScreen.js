@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import { Avatar } from '@material-ui/core';
 import '../styling/ChatScreen.css';
+import DatePicker from 'react-date-picker';
 
 
 function ChatScreen() {
+    const [value, onChange] = useState(new Date());
     const [input, setInput] = useState("");
     const [messages, setMessages] = useState([
         {
@@ -45,6 +47,13 @@ function ChatScreen() {
                 ))}
             </div>
             <form className="chatScreen_form">
+                <DatePicker
+                    onChange={onChange}
+                    value={value}
+                    minDate={new Date("02-01-2020")}
+                    maxDate={new Date("02-29-2020")}
+                    placeholderText="Select a date in January 2021"
+                />
                 <input
                     value={input}
                     onChange={e => setInput(e.target.value)}
@@ -56,7 +65,6 @@ function ChatScreen() {
                     className="chatScreen_button">Send</button>
 
             </form>
-
         </div>
     );
 }
