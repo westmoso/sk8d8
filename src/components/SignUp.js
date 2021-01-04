@@ -1,11 +1,12 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import { withRouter } from "react-router";
 import app from "../base";
 import '../styling/SignUp.css';
+import DatePicker from 'react-date-picker';
 
 
 const SignUp = ({ history }) => {
-
+    const [value, onChange] = useState(new Date());
     const handleSignUp = useCallback(async event => {
         event.preventDefault();
         const { email, password } = event.target.elements;
@@ -33,6 +34,13 @@ const SignUp = ({ history }) => {
                 </label>
 
                 <button type="submit">Sign Up</button>
+                <DatePicker
+                    onChange={onChange}
+                    value={value}
+                    minDate={new Date("02-01-2020")}
+                    maxDate={new Date("02-29-2020")}
+                    placeholderText="Select a date in January 2021"
+                />
             </form>
         </div>
     );

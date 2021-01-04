@@ -3,8 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
 import Home from "./components/Home";
 import Header from "./components/Header"
-import Login from "./components/Login";
-import SignUp from "./components/SignUp";
+import Account from "./components/Account";
 import CardFrame from "./components/CardFrame"
 import Resources from "./components/Resources"
 import ChatList from './components/ChatList';
@@ -19,13 +18,12 @@ function App() {
         <Switch>
           <div>
             <Header />
-            <CardFrame />
             <PrivateRoute exact path="/" component={Home} />
             <Route exact path="/resources" component={Resources} />
             <Route exact path="/chat"><ChatList /> </Route>
             <Route path="/chat/:person"><ChatScreen /> </Route>
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/signup" component={SignUp} />
+            <Route exact path="/account" component={Account} />
+            <CardFrame />
           </div>
         </Switch>
       </Router>

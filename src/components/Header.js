@@ -25,7 +25,7 @@ function Header() {
                     <ForumIcon fontSize="large" />
                 </IconButton>
             </Link>
-            <Link to="/login">
+            <Link to="/account">
                 <IconButton>
                     <ExitToAppIcon fontSize="large" />
                 </IconButton>
