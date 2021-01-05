@@ -4,11 +4,11 @@ import SignUp from "./SignUp";
 import app from "../base";
 
 export default function Account() {
-        return (
+    return (
         <div>
-            <button onClick={() => app.auth().signOut()}>Sign out</button>
-            <Login />
             <SignUp />
+            <Login />
+            <button onClick={() => app.auth().signOut()}>Sign out</button>
         </div>
     )
 }

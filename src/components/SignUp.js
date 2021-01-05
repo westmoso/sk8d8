@@ -3,6 +3,7 @@ import { withRouter } from "react-router";
 import app from "../base";
 import '../styling/SignUp.css';
 import DatePicker from 'react-date-picker';
+import Upload from "./Upload"
 
 
 const SignUp = ({ history }) => {
@@ -20,6 +21,7 @@ const SignUp = ({ history }) => {
         }
     }, [history]);
 
+
     return (
         <div>
             <h1>Sign up</h1>
@@ -32,8 +34,8 @@ const SignUp = ({ history }) => {
                     Password
           <input name="password" type="password" placeholder="Password" />
                 </label>
-
                 <button type="submit">Sign Up</button>
+                <Upload />
                 <DatePicker
                     onChange={onChange}
                     value={value}
