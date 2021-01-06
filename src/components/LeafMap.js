@@ -14,7 +14,7 @@ export default function LeafMap() {
     const [activePark, setActivePark] = React.useState(null);
 
     return (
-        <MapContainer center={[40.7, -74.1]} zoom={12}>
+        <MapContainer center={[45.3099, -75.7535]} zoom={12}>
             <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
